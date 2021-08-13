@@ -3,6 +3,7 @@
 {% block content %}
 <!-- DIV de cadastro de pizza -->
 <div class="main--entrada" id="cadastro--pizza">
+  
   <div class="main--card" id="cadastro">
     <h2>Cadastrar nova pizza</h2>
     <hr>
@@ -53,6 +54,10 @@
       <div>{{ form.submit() }}</div>
       <!-- <button type="submit" id="btn-do-cadastro-pizza">Cadastrar</button> -->
     </form>
+    <hr>
+        <div class="main--btn">
+          <a href="{{ url_for('pizzas') }}">Cancelar</a>
+        </div>
   </div>
 </div>
 {% endblock %}

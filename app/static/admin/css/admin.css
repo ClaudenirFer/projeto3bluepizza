@@ -17,6 +17,14 @@ main {
     align-items: center;
 }
 
+a {
+  color: #fff
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 /*----------------MENU LATERAL----------------------------------------------------------------*/
 /*estilos do menu lateral*/
 #check {

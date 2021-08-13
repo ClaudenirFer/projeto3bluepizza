@@ -57,7 +57,7 @@ def dashboardLogin():
 @app.route('/dashboard/logout')
 def dashboardLogout():
   logout_user()
-  return redirect(url_for('index'))
+  return redirect(url_for('dashboardLogin'))
 
 
 # User profile
@@ -89,7 +89,7 @@ def editUserProfile():
     
     db.session.commit()
     flash('Alterações realizadas com sucesso!')
-    return redirect(url_for('editProfile'))
+    return redirect(url_for('editUserProfile'))
   elif request.method == 'GET':
     form.username.data = current_user.username
     form_profile.person_name.data = current_user.person.person_name
@@ -128,7 +128,6 @@ def newUser():
 def pizzas():
   title = 'Lista Pizza'
   pizzas = Pizza.query.order_by(Pizza.id).all()
-  # pizzas.order_by(desc(pizzas.id))
   return render_template('admin/list_pizzas.html', title=title, pizzas=pizzas)
 
 

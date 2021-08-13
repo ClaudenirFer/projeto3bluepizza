@@ -174,14 +174,6 @@ form div {
     text-align: left;
 }
 
-.sim--nao {
-    /* border: 1px solid black; */
-    display: flex;
-    flex-direction: row;
-    padding-left: 50px;
-    margin-bottom: 10px;
-}
-
 #text--area {
     /* border: 1px solid black; */
     display: flex;
@@ -207,15 +199,15 @@ form div {
 #nome--sobrenome input {
     width: 70%;
 }
-
+/* 
 #sobrenome {
     display: flex;
     flex-direction: column;
-}
+} */
 
-#sobrenome input {
+/* #sobrenome input {
     width: 157%;
-}
+} */
 
 /*---------------------DIV DE TABELA DE PIZZAS---------------------------------------------------*/
 #tabela--pizzas {

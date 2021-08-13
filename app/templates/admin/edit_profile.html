@@ -5,38 +5,38 @@
   <div class="main--card" id="cadastro">
     <form action="" method="POST">
       {{ form.hidden_tag() }}
-      <div id="nome--sobrenome">
-        <div>
-          {{ form.username.label }}<br>
-          {{ form.username }}<br>
-          {% for error in form.username.errors %}
-          <span>{{ error }}</span>
-          {% endfor %}
-        </div>
+      <h2>Dados do usuário</h2>
+      <div>
+        {{ form.username.label }}<br>
+        {{ form.username(class='nome') }}<br>
+        {% for error in form.username.errors %}
+        <span>{{ error }}</span>
+        {% endfor %}
       </div>
-      <p>
+      <div>
         {{ form.password.label }}<br>
         {{ form.password(size=32) }}<br>
         {% for error in form.password.errors %}
         <span style="color: red">-- {{ error }} --</span>
         {% endfor %}
-      </p>
-      <div id="nome--sobrenome">
-        <div id="nome">
+      </div>
+      <h2>Perfil do usuário</h2>
+      <!-- <div id="nome--sobrenome"> -->
+        <div >
           {{ form_profile.person_name.label }}<br>
           {{ form_profile.person_name(placeholder='Nome') }}<br>
           {% for error in form_profile.person_name.errors %}
           <span>{{ error }}</span>
           {% endfor %}
         </div>
-        <div id="sobrenome">
+        <div>
           {{ form_profile.lastname.label }}<br>
           {{ form_profile.lastname(placeholder='Sobrenome') }}<br>
           {% for error in form_profile.lastname.errors %}
           <span>{{ error }}</span>
           {% endfor %}
         </div>
-      </div>
+      
       <div>
         {{ form_profile.email.label }}<br>
         {{ form_profile.email(placeholder='Email') }}<br>
